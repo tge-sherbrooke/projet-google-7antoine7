@@ -55,6 +55,70 @@
         text-decoration: none;
         margin: 10px 0px;
     }
+<!doctype html>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #recherche {
+        border-radius: 24px;
+        width: 582px;
+        height: 44px;
+        border: 1px solid #dfe1e5;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #rechercheInput {
+        border: 0px;
+        width: 527px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    #logo {
+        width: 272px;
+        height: 92px;
+
+    }
+
+    .boxLogo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        align-items: center;
+    }
+
+    #bouton {
+        margin: 10px;
+        height: 36px;
+        border-radius: 4px;
+        border: 0px;
+        font-size: 14px;
+    }
+
+    #bouton:hover {
+        border: 1px solid;
+        border-color: lightgray;
+    }
+
+    #bouton:active {
+        border: 1px solid;
+        border-color: blue;
+    }
+
+    a {
+        font-family: arial, sans-serif;
+        color: #1a0dab;
+        font-size: small;
+        text-decoration: none;
+        margin: 10px 0px;
+    }
 
     a:hover {
         text-decoration: underline;
@@ -79,11 +143,11 @@
         padding-top: 7px;
         padding-left: 15px;
         opacity: 0.75;
-
     }
 
     #topConteneur {
         display: flex;
+        align-items: center;
     }
 
     #lienApp {
@@ -110,6 +174,50 @@
         margin-top: 15px;
         align-self: center;
     }
+
+    .bottomBar {
+        display: grid;
+        grid-template-rows: 40px 40px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+
+    }
+
+    #BottomCanada {
+        background-color: #f2f2f2;
+        border: #e4e4e4 1px solid;
+        color: rgba(0, 0, 0, .70);
+        font-size: 15px;
+        font-family: arial, sans-serif;
+        padding-top: 7px;
+        padding-left: 15px;
+        opacity: 0.75;
+    }
+
+    .BottomLien {
+
+        color: rgba(0, 0, 0, .70);
+        font-size: 15px;
+        font-family: arial, sans-serif;
+        opacity: 0.75;
+        margin-right: 30px;
+
+    }
+
+    #BottomLienBox {
+        background-color: #f2f2f2;
+        border: #e4e4e4 1px solid;
+        padding-top: 7px;
+        padding-left: 15px;
+
+    }
+
+    #BottomLienBoxDroite {
+        position: fixed;
+        right: 16px;
+        bottom: 10px;
+    }
 </style>
 <header>
     <div id="topConteneur">
@@ -118,7 +226,7 @@
             À Propos</a>
         <a class="topBar"
             href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjozoeJ6Y7pAhXRbc0KHWKPBU0QpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FCA%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Dfr-CA&usg=AOvVaw1DfKDBgMF8IHg7NmPq5K2w">
-            Google Srore</a>
+            Google Store</a>
         <div style="width: 78%;"></div>
         <a class="topBar" href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
         <a class="topBar" href="https://www.google.ca/imghp?hl=fr&tab=wi&ogbl">Images</a>
@@ -146,8 +254,8 @@
         <div>
             <input type="button" id="bouton" value="Recherche Google">
             <a href="https://www.google.com/doodles/">
-            <input type="button" id="bouton" value="J'ai de la chance">
-        </a>
+                <input type="button" id="bouton" value="J'ai de la chance">
+            </a>
         </div>
         <div style="margin-top: 20px;"><a
                 href="https://www.google.com/url?q=https://www.google.com/intl/fr-CA/maps/about/treks/%23/grid&source=hpp&id=19017653&ct=3&usg=AFQjCNHTU_gK-vJEa2fU3FlZ5FKvBV9owg&sa=X&ved=0ahUKEwiTno3Woo7pAhUSG80KHQ73CCwQ8IcBCBA">Du
@@ -160,3 +268,33 @@
     </div>
 </body>
 
+<footer>
+    <div class="bottomBar">
+        <div id="BottomCanada">Canada</div>
+        <div id="BottomLienBox">
+            <div id="BottomLienBoxGauche">
+                <a class="BottomLien"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiy0vGg9ZDpAhWCG80KHYMaAakQkdQCCBc&url=https%3A%2F%2Fwww.google.com%2Fintl%2Ffr_ca%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw0QaLBQLPD9t11v24kjfh1f">
+                    Publicité</a>
+                <a class="BottomLien"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiy0vGg9ZDpAhWCG80KHYMaAakQktQCCBg&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">
+                    Entreprise</a>
+                <a class="BottomLien" href="https://google.com/search/howsearchworks/?fg=1">
+                    Comment fonctionne la recherche Google ? </a>
+            </div>
+            <div id="BottomLienBoxDroite">
+                <a class="BottomLien"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwia1L6E95DpAhWHHc0KHWjKC0QQ8awCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Ffg%3D1&usg=AOvVaw12z8DS9cd-g0Aokit_wxri">
+                    Confidentialité</a>
+                <a class="BottomLien"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwia1L6E95DpAhWHHc0KHWjKC0QQ8qwCCBQ&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Ffg%3D1&usg=AOvVaw3sEM_N0elgYQx8WbCXpj3n">
+                    Conditions d'utilisation</a>
+                <a class="BottomLien"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwia1L6E95DpAhWHHc0KHWjKC0QQzq0CCBU&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Dfr&usg=AOvVaw1Z0Yi9EwVWnjnl-U5CFOv3">
+                    Paramètres</a>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
