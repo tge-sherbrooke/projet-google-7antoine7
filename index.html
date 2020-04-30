@@ -1,84 +1,162 @@
 <style>
-#recherche{
-    border-radius: 24px;
-    width: 582px;
-    height: 44px;
-    border: 1px solid #dfe1e5;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#rechercheInput{
-    border: 0px;
-    width: 527px;
-    height: 34px;
-    font-size: 16px;
-}
-#logo{
-    width: 272px;
-    height: 92px;
-   
-}
-.boxLogo {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    align-items: center;
-}
-#bouton{
-    margin: 10px;
-    height: 36px;
-    border-radius: 4px;
-    border: 0px;
-    font-size: 14px;
-}
-#bouton:hover{
-    border: 1px solid;
-    border-color: black;
-}
-#bouton:active {
-    border: 1px solid;
-    border-color: blue;
-}
-a {
-    font-family: arial,sans-serif;
-    color: #1a0dab;
-    font-size: small;
-    text-decoration: none;
-    margin: 10px 0px;
-}
-a:hover{
-    text-decoration: underline;
-}
-p {
-    font-family: arial,sans-serif;
-    font-size: small;
-}
-#loupe{
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    
-}
+    #recherche {
+        border-radius: 24px;
+        width: 582px;
+        height: 44px;
+        border: 1px solid #dfe1e5;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #rechercheInput {
+        border: 0px;
+        width: 527px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    #logo {
+        width: 272px;
+        height: 92px;
+
+    }
+
+    .boxLogo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        align-items: center;
+    }
+
+    #bouton {
+        margin: 10px;
+        height: 36px;
+        border-radius: 4px;
+        border: 0px;
+        font-size: 14px;
+    }
+
+    #bouton:hover {
+        border: 1px solid;
+        border-color: lightgray;
+    }
+
+    #bouton:active {
+        border: 1px solid;
+        border-color: blue;
+    }
+
+    a {
+        font-family: arial, sans-serif;
+        color: #1a0dab;
+        font-size: small;
+        text-decoration: none;
+        margin: 10px 0px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        font-family: arial, sans-serif;
+        font-size: small;
+    }
+
+    #loupe {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+
+    }
+
+    .topBar {
+        color: black;
+        font-size: 13px;
+        font-family: arial, sans-serif;
+        padding-top: 7px;
+        padding-left: 15px;
+        opacity: 0.75;
+
+    }
+
+    #topConteneur {
+        display: flex;
+    }
+
+    #lienApp {
+        width: 25px;
+        height: 25px;
+    }
+
+    #boutonConnexion {
+        background-color: #4386f9;
+        color: white;
+        font-size: 13px;
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        height: 28px;
+        border: 0px;
+    }
+
+    #boutonConnexion:active {
+        background-color: #3d78dc;
+    }
+
+    #lienConnexion {
+        margin-left: 15px;
+        margin-top: 15px;
+        align-self: center;
+    }
 </style>
-<div class="boxLogo">
-    <div><img id="logo"src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></div>
-    <div id="recherche">
-        <img id="loupe" src="data:image/png;base64,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">
-        <div style="margin-right: 10px;"></div>
-        <input id="rechercheInput">
+<header>
+    <div id="topConteneur">
+        <a class="topBar"
+            href="https://about.google/?fg=1&utm_source=google-CA&utm_medium=referral&utm_campaign=hp-header">
+            À Propos</a>
+        <a class="topBar"
+            href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjozoeJ6Y7pAhXRbc0KHWKPBU0QpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FCA%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Dfr-CA&usg=AOvVaw1DfKDBgMF8IHg7NmPq5K2w">
+            Google Srore</a>
+        <div style="width: 78%;"></div>
+        <a class="topBar" href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
+        <a class="topBar" href="https://www.google.ca/imghp?hl=fr&tab=wi&ogbl">Images</a>
+        <a href="https://www.google.ca/intl/fr/about/products?tab=wh">
+            <img class="topBar" id=lienApp
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAHlBMVEX///8AAAD09PTLy8uUlJSPj4/5+fnl5eXNzc3IyMgWJBrXAAABJklEQVR4nO3cQQ6CMBRFUSwtpfvfsAv4qD8EI6nnzF/0MhMpywIAAAAAAAAAcC+j1YQt7Hpm13rYbZmPa+PCwvbIKPHKpHbxm5bUrl1YWE8WrqnderKwKlSoUKFChQoVKlSoUKFChQoVKlSoUKFChQoVKlSoUKFChRcW7qndfoPCrWQcDL+6i89+AAAAAO/1sX4Wb0YsJbMbBz/y98wuntM4z3mLV4Xz32tTqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoX3K5z/f/z5n8UAAACA/zD/OxXmfy/G/PfaFCpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFDhPIXzn7cYrSbEZyN6ZtfiuYkt83EtXhkAAAAAAAAAgN96AuUrQOqYK1c6AAAAAElFTkSuQmCC"></img>
+        </a>
+        <a id="lienConnexion"
+            href="https://accounts.google.com/ServiceLogin?hl=fr&passive=true&continue=https://www.google.com/">
+            <input type="button" value="Connexion" id="boutonConnexion"></input>
+        </a>
     </div>
-    <div>
-        <input type="button" id="bouton" value="Recherche Google">
-        <input type="button" id="bouton" value="J'ai de la chance">
-    </div>
-    <div style="margin-top: 20px;"><a href="https://www.google.com/url?q=https://www.google.com/intl/fr-CA/maps/about/treks/%23/grid&source=hpp&id=19017653&ct=3&usg=AFQjCNHTU_gK-vJEa2fU3FlZ5FKvBV9owg&sa=X&ved=0ahUKEwiTno3Woo7pAhUSG80KHQ73CCwQ8IcBCBA">Du Grand Canyon au mont. Fuji, voyagez à travers le monde depuis chez vous</a></div>
-    <div style="margin-top: 30px;">
-        <p>Google disponible en : <a href="https://www.google.com/setprefs?sig=0_WVBVUQ-0tO73Y26YUv80vaCZ1Kg%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiTno3Woo7pAhUSG80KHQ73CCwQ2ZgBCBI">English</a>
-        </p>
-    </div>
-</div>
+</header>
 
-
+<body>
+    <div class="boxLogo">
+        <div><img id="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        </div>
+        <div id="recherche">
+            <img id="loupe"
+                src="data:image/png;base64,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">
+            <div style="margin-right: 10px;"></div>
+            <input id="rechercheInput">
+        </div>
+        <div>
+            <input type="button" id="bouton" value="Recherche Google">
+            <a href="https://www.google.com/doodles/">
+            <input type="button" id="bouton" value="J'ai de la chance">
+        </a>
+        </div>
+        <div style="margin-top: 20px;"><a
+                href="https://www.google.com/url?q=https://www.google.com/intl/fr-CA/maps/about/treks/%23/grid&source=hpp&id=19017653&ct=3&usg=AFQjCNHTU_gK-vJEa2fU3FlZ5FKvBV9owg&sa=X&ved=0ahUKEwiTno3Woo7pAhUSG80KHQ73CCwQ8IcBCBA">Du
+                Grand Canyon au mont. Fuji, voyagez à travers le monde depuis chez vous</a></div>
+        <div style="margin-top: 30px;">
+            <p>Google disponible en : <a
+                    href="https://www.google.com/setprefs?sig=0_WVBVUQ-0tO73Y26YUv80vaCZ1Kg%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiTno3Woo7pAhUSG80KHQ73CCwQ2ZgBCBI">English</a>
+            </p>
+        </div>
+    </div>
+</body>
 
